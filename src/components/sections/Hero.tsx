@@ -104,7 +104,7 @@ export default function Hero() {
             <span className="font-semibold uppercase tracking-wider">Focus Areas:</span>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
               <Code2 className="w-3.5 h-3.5 text-brand-purple" />
-              <span className="text-zinc-400">ASP.NET Core</span>
+              <span className="text-zinc-400">ASP.NET</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-zinc-900/50 border border-zinc-800/80">
               <Database className="w-3.5 h-3.5 text-brand-cyan" />

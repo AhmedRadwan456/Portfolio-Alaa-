@@ -58,7 +58,7 @@ export default function About() {
                   <CheckCircle2 className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
                   <div>
                     <h4 className="text-sm font-semibold text-white">Backend Specialist</h4>
-                    <p className="text-xs text-zinc-500">Expertise in C# & .NET Core architectures.</p>
+                    <p className="text-xs text-zinc-500">Expertise in C# & .NET architectures.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function About() {
             >
               <span className="text-xs font-mono uppercase tracking-widest text-brand-cyan mb-2">Database design</span>
               <p className="text-xs text-zinc-400 leading-relaxed max-w-sm">
-                Strong focus on Microsoft SQL Server, Entity Framework Core query tuning, migrations, and schema validation.
+                Strong focus on Microsoft SQL Server, Entity Framework query tuning, migrations, and schema validation.
               </p>
             </motion.div>
           </div>

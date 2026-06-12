@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alaa Samir | .NET & Full-Stack Developer Portfolio",
-  description: "Explore the professional portfolio of Alaa Samir, a backend specialist in ASP.NET Core, C#, Clean Architecture, and full-stack integration with Next.js and Tailwind CSS.",
-  keywords: [".NET Developer", "C#", "ASP.NET Core Web API", "Full-Stack Developer", "Alaa Samir", "Software Engineer", "Egypt"],
+  title: "Alaa Samir | .NET BackEnd Developer Portfolio",
+  description: "Explore the professional portfolio of Alaa Samir, a backend specialist in ASP.NET, C#, Clean Architecture, and integration.",
+  keywords: [".NET Developer", "C#", "ASP.NET Web API", "BackEnd Developer", "Alaa Samir", "Software Engineer", "Egypt"],
   authors: [{ name: "Alaa Samir" }],
 };
 

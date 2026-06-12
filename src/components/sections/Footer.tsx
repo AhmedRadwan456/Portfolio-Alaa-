@@ -29,7 +29,7 @@ export default function Footer() {
 
         {/* Tagline */}
         <p className="text-xs text-zinc-500 text-center font-mono">
-          Clean Code • SOLID Principles • ASP.NET Core & Next.js
+          Clean Code • SOLID Principles • ASP.NET & Next.js
         </p>
 
         {/* Copyright & Scroll Top */}

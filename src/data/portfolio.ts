@@ -59,9 +59,9 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Alaa Samir",
     title: "BackEnd Developer (.NET)",
-    subTitle: "Building robust, scalable backend architectures with ASP.NET Core, C#, Clean Architecture, and SQL Server.",
-    aboutBio: "I am Alaa Samir, a passionate .NET BackEnd Developer with a strong background in problem-solving (ICPC participant), Object-Oriented Programming (OOP), algorithms, and data structures. I specialize in designing databases and building RESTful APIs using ASP.NET Core, C#, LINQ, and Entity Framework Core. I enjoy writing clean, maintainable code and optimizing system performance.",
-    resumeUrl: "https://drive.google.com/file/d/1dk1qBxsT6SswJq0yWydPOhnPUPjDd0LY/view?usp=sharing", 
+    subTitle: "Building robust and scalable backend applications using ASP.NET, C#, and SQL Server. Focused on writing clean, efficient code and delivering reliable solutions",
+    aboutBio: "I am Alaa Samir, a passionate .NET BackEnd Developer with a strong background in problem-solving (ICPC participant), Object-Oriented Programming (OOP), algorithms, and data structures. I specialize in designing databases and building RESTful APIs using ASP.NET, C#, LINQ, and Entity Framework. I enjoy writing clean, maintainable code and optimizing system performance.",
+    resumeUrl: "https://drive.google.com/file/d/1dk1qBxsT6SswJq0yWydPOhnPUPjDd0LY/view?usp=sharing",
     email: "alaasamer222004@gmail.com",
     location: "Cairo, Egypt",
     phone: "01033264791",
@@ -93,21 +93,21 @@ export const portfolioData: PortfolioData = {
     },
   ],
   stats: [
-    { value: "C#", label: "Backend Core" },
+    { value: "C#", label: "Backend" },
     { value: "100%", label: "Clean Code Focus" },
     { value: "ICPC", label: "Contest Participant" },
     { value: "Route", label: ".NET Certified" },
   ],
   skills: [
     // Backend Skills
-    { name: "C# / .NET Core", level: 95, category: "backend" },
-    { name: "ASP.NET Core Web API", level: 92, category: "backend" },
-    { name: "Entity Framework Core", level: 90, category: "backend" },
+    { name: "C# / .NET ", level: 95, category: "backend" },
+    { name: "ASP.NET  Web API", level: 92, category: "backend" },
+    { name: "Entity Framework ", level: 90, category: "backend" },
     { name: "SQL Server & Database Design", level: 90, category: "backend" },
     { name: "LINQ", level: 92, category: "backend" },
     { name: "SignalR", level: 85, category: "backend" },
     { name: "MVC Architecture", level: 88, category: "backend" },
-    
+
     // FrontEnd / Mobile
     { name: "HTML & CSS", level: 85, category: "frontend" },
     { name: "Flutter & Dart", level: 80, category: "frontend" },
@@ -121,15 +121,15 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: "Echoes Of History",
-      description: "Backend for a digital museum platform built with ASP.NET Core Web API, Entity Framework Core, and SQL Server, providing RESTful services for museums, statues, search, favorites, and user history.",
-      techStack: ["ASP.NET Core Web API", "EF Core", "SQL Server", "RESTful Services"],
+      description: "Backend for a digital museum platform built with ASP.NET  Web API, Entity Framework , and SQL Server, providing RESTful services for museums, statues, search, favorites, and user history.",
+      techStack: ["ASP.NET  Web API", "EF", "SQL Server", "RESTful Services"],
       category: "backend",
       githubUrl: "https://github.com/alaa222004",
     },
     {
       title: "E-commerce System",
-      description: "Backend for an online shopping platform built with ASP.NET Core Web API, handling products, orders, users, and secure transactions.",
-      techStack: ["ASP.NET Core Web API", "EF Core", "SQL Server", "Transactions"],
+      description: "Backend for an online shopping platform built with ASP.NET  Web API, handling products, orders, users, and secure transactions.",
+      techStack: ["ASP.NET  Web API", "EF", "SQL Server", "Transactions"],
       category: "backend",
       githubUrl: "https://github.com/alaa222004",
     },
@@ -179,7 +179,7 @@ export const portfolioData: PortfolioData = {
       company: "Route Academy",
       duration: "07/2023 – 10/2023",
       description: [
-        "Completed a back-end development program focusing on ASP.NET Core, C#, and SQL Server.",
+        "Completed a back-end development program focusing on ASP.NET, C#, and SQL Server.",
         "Gained hands-on experience in building RESTful APIs, managing databases, and implementing authentication."
       ],
       isCurrent: false,
