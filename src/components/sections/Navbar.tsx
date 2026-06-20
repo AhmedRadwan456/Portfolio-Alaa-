@@ -19,21 +19,17 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  // Monitor scroll to update active section & sticky state
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Section intersection detection
       const sections = navLinks.map(link => {
         const el = document.getElementById(link.href.substring(1));
         if (el) {
           const rect = el.getBoundingClientRect();
           return {
             id: link.href.substring(1),
-            // If the top of the section is near the top of the screen
             topDiff: Math.abs(rect.top),
-            // Check if section occupies the upper part of the viewport
             inView: rect.top <= 150 && rect.bottom >= 150,
           };
         }
@@ -44,10 +40,9 @@ export default function Navbar() {
       if (visible) {
         setActiveSection(visible.id);
       } else {
-        // Fallback to closest section top
         const validSections = sections.filter((s): s is { id: string; topDiff: number; inView: boolean } => s !== null);
         if (validSections.length > 0) {
-          const closest = validSections.reduce((prev, curr) => 
+          const closest = validSections.reduce((prev, curr) =>
             prev.topDiff < curr.topDiff ? prev : curr
           );
           setActiveSection(closest.id);
@@ -65,15 +60,13 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`max-w-7xl mx-auto w-full flex items-center justify-between px-6 py-3 rounded-2xl pointer-events-auto transition-all duration-300 ${
-          isScrolled 
-            ? "glass-panel bg-opacity-80 shadow-lg border-brand-purple/20 py-2.5" 
+        className={`max-w-7xl mx-auto w-full flex items-center justify-between px-6 py-3 rounded-2xl pointer-events-auto transition-all duration-300 ${isScrolled
+            ? "glass-panel bg-opacity-80 shadow-lg border-brand-purple/20 py-2.5"
             : "bg-transparent border-transparent"
-        }`}
+          }`}
       >
-        {/* Brand / Logo */}
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           className="flex items-center gap-2 group text-white font-bold text-xl tracking-tight"
         >
           <div className="w-8 h-8 rounded-lg bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center transition-all duration-300 group-hover:bg-brand-purple/30 group-hover:border-brand-purple">
@@ -84,7 +77,6 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <ul className="flex items-center gap-1.5 text-sm font-medium text-zinc-400">
             {navLinks.map((link) => {
@@ -94,9 +86,8 @@ export default function Navbar() {
                 <li key={link.href} className="relative">
                   <a
                     href={link.href}
-                    className={`px-3.5 py-1.5 rounded-lg transition-colors duration-250 hover:text-white ${
-                      isActive ? "text-white" : ""
-                    }`}
+                    className={`px-3.5 py-1.5 rounded-lg transition-colors duration-250 hover:text-white ${isActive ? "text-white" : ""
+                      }`}
                   >
                     {link.label}
                     {isActive && (
@@ -113,7 +104,6 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Desktop CTA */}
         <div className="hidden md:block">
           <a
             href="#contact"
@@ -123,7 +113,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Navigation Toggle */}
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -135,7 +124,6 @@ export default function Navbar() {
         </div>
       </motion.div>
 
-      {/* Mobile Drawer */}
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
@@ -154,11 +142,10 @@ export default function Navbar() {
                     <a
                       href={link.href}
                       onClick={() => setIsMobileOpen(false)}
-                      className={`block text-lg font-medium py-1.5 px-3 rounded-xl transition-all ${
-                        isActive
+                      className={`block text-lg font-medium py-1.5 px-3 rounded-xl transition-all ${isActive
                           ? "bg-brand-purple/15 text-white border-l-2 border-brand-purple pl-4"
                           : "text-zinc-400 hover:text-white"
-                      }`}
+                        }`}
                     >
                       {link.label}
                     </a>

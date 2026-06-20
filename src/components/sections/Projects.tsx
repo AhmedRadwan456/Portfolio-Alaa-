@@ -57,7 +57,6 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-24 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
             Featured <span className="bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent">Projects</span>
@@ -65,7 +64,6 @@ export default function Projects() {
           <div className="w-12 h-1 rounded bg-brand-purple" />
         </div>
 
-        {/* Filters Panel */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((cat) => {
             const isActive = filter === cat.id;
@@ -73,11 +71,10 @@ export default function Projects() {
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.id)}
-                className={`relative px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                  isActive
-                    ? "text-white bg-brand-purple/10 border border-brand-purple/20"
-                    : "text-zinc-400 hover:text-white hover:bg-zinc-900/50 border border-transparent"
-                }`}
+                className={`relative px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${isActive
+                  ? "text-white bg-brand-purple/10 border border-brand-purple/20"
+                  : "text-zinc-400 hover:text-white hover:bg-zinc-900/50 border border-transparent"
+                  }`}
               >
                 {cat.label}
                 {isActive && (
@@ -92,8 +89,7 @@ export default function Projects() {
           })}
         </div>
 
-        {/* Projects Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
@@ -113,7 +109,6 @@ export default function Projects() {
                   className={`glass-panel p-6 rounded-2xl flex flex-col justify-between border ${theme.border} hover:border-brand-purple/35 transition-all shadow-lg ${theme.glow}`}
                 >
                   <div>
-                    {/* Header */}
                     <div className="flex items-center justify-between mb-4">
                       <div className={`p-2 rounded-lg bg-zinc-900 border border-zinc-800 ${theme.color}`}>
                         <ProjIcon className="w-4 h-4" />
@@ -123,20 +118,16 @@ export default function Projects() {
                       </span>
                     </div>
 
-                    {/* Title */}
                     <h3 className="text-lg font-bold text-white mb-2 leading-tight group-hover:text-brand-purple transition-colors">
                       {project.title}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-xs text-zinc-400 leading-relaxed mb-6">
                       {project.description}
                     </p>
                   </div>
 
-                  {/* Tech stack & Links footer */}
                   <div>
-                    {/* Tech Badges */}
                     <div className="flex flex-wrap gap-1.5 mb-6">
                       {project.techStack.map((tech) => (
                         <span
@@ -148,7 +139,6 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* Links */}
                     <div className="flex items-center gap-3 border-t border-zinc-900 pt-4">
                       {project.githubUrl && (
                         <a

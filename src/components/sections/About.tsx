@@ -29,7 +29,6 @@ export default function About() {
   return (
     <section id="about" className="relative py-24 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
             About <span className="bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent">Me</span>
@@ -37,9 +36,7 @@ export default function About() {
           <div className="w-12 h-1 rounded bg-brand-purple" />
         </div>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Bio Column */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -52,7 +49,7 @@ export default function About() {
               <p className="text-zinc-400 leading-relaxed mb-6">
                 {aboutBio}
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
@@ -71,7 +68,6 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* Core Values / Strengths */}
             <div className="flex flex-col gap-4">
               {coreValues.map((val, idx) => {
                 const IconComponent = val.icon;
@@ -97,7 +93,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Stats Column */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-4 w-full">
             {stats.map((stat, index) => (
               <motion.div
@@ -117,7 +112,6 @@ export default function About() {
               </motion.div>
             ))}
 
-            {/* Additional visual element */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

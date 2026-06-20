@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  Mail, 
-  MapPin, 
-  Send, 
-  MessageSquare, 
-  CheckCircle2, 
-  AlertCircle 
+import {
+  Mail,
+  MapPin,
+  Send,
+  MessageSquare,
+  CheckCircle2,
+  AlertCircle
 } from "lucide-react";
 import { portfolioData, SocialLink } from "@/data/portfolio";
 
@@ -38,7 +38,6 @@ export default function Contact() {
   const { email, location } = portfolioData.personalInfo;
   const { socialLinks } = portfolioData;
 
-  // Form State
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,14 +60,12 @@ export default function Contact() {
 
     setStatus("loading");
 
-    // Simulate API request to backend (perfect placeholder for .NET developers to connect later)
     setTimeout(() => {
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     }, 1500);
   };
 
-  // Map icons dynamically
   const getSocialIcon = (iconName: string) => {
     switch (iconName.toLowerCase()) {
       case "linkedin":
@@ -102,7 +99,6 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
             Get In <span className="bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent">Touch</span>
@@ -110,9 +106,7 @@ export default function Contact() {
           <div className="w-12 h-1 rounded bg-brand-purple" />
         </div>
 
-        {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Left Info Column */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div className="mb-8 lg:mb-0">
               <h3 className="text-xl font-bold text-white mb-4">Let's build something together!</h3>
@@ -120,7 +114,6 @@ export default function Contact() {
                 Have an project idea, code challenge, or full-stack application you'd like to develop? Drop me a message!
               </p>
 
-              {/* Direct Info list */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-brand-purple">
@@ -146,7 +139,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Grid */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-4">Connect with me on Socials</h4>
               <div className="flex flex-wrap gap-3">
@@ -168,7 +160,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right Form Column */}
           <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -242,7 +233,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit button with states */}
                 <button
                   type="submit"
                   disabled={status === "loading" || status === "success"}
@@ -266,7 +256,6 @@ export default function Contact() {
                   )}
                 </button>
 
-                {/* Feedback notifications */}
                 {status === "success" && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}

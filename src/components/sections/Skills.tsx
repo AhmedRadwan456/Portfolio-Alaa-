@@ -9,7 +9,6 @@ export default function Skills() {
   const [activeTab, setActiveTab] = useState<"all" | "backend" | "frontend" | "tools">("all");
   const { skills } = portfolioData;
 
-  // Tabs structure
   const tabs = [
     { id: "all", label: "All Skills", icon: null },
     { id: "backend", label: "Backend / .NET", icon: Server },
@@ -17,13 +16,11 @@ export default function Skills() {
     { id: "tools", label: "Tools & DevOps", icon: Settings },
   ] as const;
 
-  // Filter skills
   const filteredSkills = skills.filter((skill) => {
     if (activeTab === "all") return true;
     return skill.category === activeTab;
   });
 
-  // Decide colors based on category
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "backend":
@@ -53,7 +50,6 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-24 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3">
             Technical <span className="bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent">Skills</span>
@@ -61,7 +57,6 @@ export default function Skills() {
           <div className="w-12 h-1 rounded bg-brand-purple" />
         </div>
 
-        {/* Categories Tab Selector */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {tabs.map((tab) => {
             const Icon = tab.icon;
@@ -70,11 +65,10 @@ export default function Skills() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 cursor-pointer transition-all duration-300 ${
-                  isActive
+                className={`relative px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 cursor-pointer transition-all duration-300 ${isActive
                     ? "text-white border border-brand-purple/20 bg-brand-purple/10"
                     : "text-zinc-400 hover:text-white border border-transparent hover:bg-zinc-900/50"
-                }`}
+                  }`}
               >
                 {Icon && <Icon className="w-4 h-4" />}
                 {tab.label}
@@ -90,8 +84,7 @@ export default function Skills() {
           })}
         </div>
 
-        {/* Skills Grid */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
@@ -118,7 +111,6 @@ export default function Skills() {
                     </span>
                   </div>
 
-                  {/* Progress Bar Container */}
                   <div className="w-full h-2 rounded-full bg-zinc-900 overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
@@ -129,7 +121,6 @@ export default function Skills() {
                     />
                   </div>
 
-                  {/* Subtitle tag */}
                   <div className="mt-3 flex items-center justify-between">
                     <span className="text-[10px] uppercase tracking-wider text-zinc-600 font-bold">
                       {skill.category}

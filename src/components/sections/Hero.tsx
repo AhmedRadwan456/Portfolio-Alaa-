@@ -8,14 +8,12 @@ export default function Hero() {
   const { name, title, subTitle, resumeUrl } = portfolioData.personalInfo;
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Content Column */}
         <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
-          {/* Animated Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +27,6 @@ export default function Hero() {
             Available for Freelance & Projects
           </motion.div>
 
-          {/* Title and Job Roles */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +48,6 @@ export default function Hero() {
             {title}
           </motion.h2>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +57,6 @@ export default function Hero() {
             {subTitle}
           </motion.p>
 
-          {/* Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +89,6 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Mini Tech Badges */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -117,7 +111,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Interactive Visual Column */}
         <div className="lg:col-span-5 flex justify-center z-10 w-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
@@ -125,17 +118,14 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-full max-w-md relative group"
           >
-            {/* Background Glow */}
             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-purple to-brand-cyan opacity-30 blur-xl group-hover:opacity-50 transition duration-1000" />
-            
-            {/* Image Container */}
+
             <div className="relative glass-panel border-brand-purple/20 rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/alaa.jpeg" 
-                alt="Alaa Samir" 
+              <img
+                src="/alaa.jpeg"
+                alt="Alaa Samir"
                 className="w-full h-auto object-cover aspect-[4/5] object-center transform hover:scale-[1.02] transition-transform duration-500"
               />
-              {/* Decorative corner tag / overlay */}
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-panel border-zinc-800/80 bg-zinc-950/80 flex items-center justify-between">
                 <div>
                   <p className="text-sm font-bold text-white">Alaa Samir</p>
@@ -150,7 +140,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-60">
         <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">Scroll Down</span>
         <motion.div

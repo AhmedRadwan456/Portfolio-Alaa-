@@ -4,7 +4,7 @@ export interface SocialLink {
   platform: string;
   url: string;
   username: string;
-  icon: string; // Used to match custom icons
+  icon: string;
 }
 
 export interface Stat {
@@ -14,7 +14,7 @@ export interface Stat {
 
 export interface Skill {
   name: string;
-  level: number; // Percentage 0-100
+  level: number;
   category: "backend" | "frontend" | "tools";
 }
 
@@ -61,7 +61,7 @@ export const portfolioData: PortfolioData = {
     title: "BackEnd Developer (.NET)",
     subTitle: "Building robust and scalable backend applications using ASP.NET, C#, and SQL Server. Focused on writing clean, efficient code and delivering reliable solutions",
     aboutBio: "I am Alaa Samir, a passionate .NET BackEnd Developer with a strong background in problem-solving (ICPC participant), Object-Oriented Programming (OOP), algorithms, and data structures. I specialize in designing databases and building RESTful APIs using ASP.NET, C#, LINQ, and Entity Framework. I enjoy writing clean, maintainable code and optimizing system performance.",
-    resumeUrl: "https://drive.google.com/file/d/1l_Ob77KBywt8XUEU-MreK6S9ria21I9x/view",
+    resumeUrl: "https://drive.google.com/file/d/1r7Q_w-a-12HdHaq0sn3uCbZfRd18tZlU/view",
     email: "alaasamer222004@gmail.com",
     location: "Cairo, Egypt",
     phone: "01033264791",
